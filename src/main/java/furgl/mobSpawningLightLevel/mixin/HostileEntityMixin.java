@@ -59,7 +59,7 @@ public class HostileEntityMixin {
 	@Redirect(method = "getPathfindingFavor(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/WorldView;)F",
 			at = @At(value = "INVOKE", target = "Lnet/minecraft/world/WorldView;getBrightness(Lnet/minecraft/util/math/BlockPos;)F"))
 	public float getBrightness(WorldView world, BlockPos pos) {
-		return world.getDimension().method_28516(world.getLightLevel(pos, world.getAmbientDarkness()+
+		return world.getDimension().getBrightness(world.getLightLevel(pos, world.getAmbientDarkness()+
 				(world instanceof World ? getAmbientDarknessOffset((World) world) : 0)));
 	}
 
