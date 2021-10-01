@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "furgl.mobSpawningLightLevel.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  	"HostileEntityMixin"
+    ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
